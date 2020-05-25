@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Signup Form</title>
+<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+        $('h1').bind("mouseover", function(){
+            var color  = $(this).css("background-color");
+
+            $(this).css("background", "#00ffff");
+
+            $(this).bind("mouseout", function(){
+                $(this).css("background", color);
+            })
+        })
+    })
+    $('input[type=text]').val (function () {
+    return this.value.toUpperCase();
+})
+
+</script>
+</head>
+<body>
+<div class="container">
+<div class="jumbotron">
+<h1>{{title}}</h1>
+<div class ='container'>
+</div>
+</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="/f">Find Details</a></li>
+      <li><a href="/d">Delete</a></li>
+      <li><a href="/u">Update</a></li>
+    </ul>
+  </div>
+</nav>
+      <form class="form-horizontal" action="/update" method="put">
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Name:</label>
+          <div class="col-sm-3">
+            <input class="form-control" type="text" name="name" id="name" placeholder="enter your Name"  required /><br>
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Email:</label>
+          <div class="col-sm-3">
+            <input class="form-control" type="email" name="email" id="email" placeholder="enter your E-Mail " required /><br>
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Password:</label>
+          <div class="col-sm-3">
+            <input class="form-control" type="password" name="password" id="password" placeholder="Enter the Password " required/><br>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="name">Phone:</label>
+        <div class="col-sm-3">
+            <input class="form-control" type="tel" name="phone" id="phone" placeholder="enter the Phone Number " required/><br>
+        </div>
+      </div>
+    <br>
+    <div class="form-group">
+<div class="col-sm-offset-2 col-sm-2">
+            <input type="submit" class="btn btn-default" id="submitDetails" name="submitDetails" value="Submit" /><br>
+</div></div>
+            </form>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="panel panel-default">
+        <div class="panel-footer">Panel Footer</div>
+        <div class="panel-footer">Panel Footer2</div>
+        </div>
+      </div>
+
+
+
+</body>
+</html>
